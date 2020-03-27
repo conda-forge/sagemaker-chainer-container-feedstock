@@ -1,5 +1,5 @@
 {% set name = "sagemaker-chainer-container" %}
-{% set version = "1.0.9" %}
+{% set version = "1.0.9.post0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/aws/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: fd4c863a38b1921d5837924dbc4add51afde128d14e1bed1cdd2af2ae363c165
+  sha256: 39a6b121bbca9f8e9ade4f4a9c92a16d3c6a193f1855c970be20cd653b4c5678
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
